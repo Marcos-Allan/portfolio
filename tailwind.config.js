@@ -23,25 +23,24 @@
 //   ],
 // }
 
-import { defineConfig } from 'tailwindcss';
+import scrollbar from 'tailwind-scrollbar';
 
 export default defineConfig({
   content: ['index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors:{
+      colors: {
         'my-primary': '#262521',
         'my-secondary': '#403F3C',
         'my-terciary': '#21CECC',
         'my-quartenary': '#F2F2F2',
         'my-quintenary': '#BFBFBF',
       },
-      fontFamily:{
-        montserrat: ['Montserrat', 'sans-serif']
-      }
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [scrollbar],
 });
+
